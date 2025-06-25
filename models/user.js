@@ -1,3 +1,4 @@
+const { name } = require('ejs');
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema({
@@ -9,6 +10,20 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  pantry:  {
+    property: name,
+    type: String,
+  }
+});
+
+
+const foodSchema = new mongoose.Schema({
+  Food: {
+    property: name,
+    type: String,
+    required: true,
+  }
+  
 });
 
 const User = mongoose.model('User', userSchema);

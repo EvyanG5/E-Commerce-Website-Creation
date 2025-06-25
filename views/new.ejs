@@ -3,16 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title></title>
   <%- include('./partials/_navbar.ejs') %>
 
 </head>
 <body>
- <body>
-  <%- include('./partials/_navbar.ejs') %>
-  <h1>Welcome to CookBook</h1>
+ const foodSchema = new mongoose.Schema({
+  Food: {
+    property: name,
+    type: String,
+    required: true,
+  }
+  
+});
+
 </body>
 
-
-</body>
 </html>
