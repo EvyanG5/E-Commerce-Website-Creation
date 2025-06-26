@@ -42,8 +42,10 @@ app.get('/vip-lounge', (req, res) => {
   } else {
     res.send('Sorry, no guests allowed.');
   }
-});
+  });
+ 
 
+   
 app.use(passUserToView);
 app.use('/auth', authController);
 app.use(isSignedIn);
