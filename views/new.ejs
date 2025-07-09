@@ -8,15 +8,35 @@
 
 </head>
 <body>
- const foodSchema = new mongoose.Schema({
-  Food: {
-    property: name,
+const itemSchema = new mongoose.Schema({
+  itemType: {
     type: String,
     required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  sellerAgreement: {
+    type: Boolean,
+    required: true,
+},
+  description: {
+  type: String,
+  required: true,
+  },
+
+  sold: {
+    type: Boolean,
+    required: true,
+  },
+  buy: {
+    type: Number,
+    required: true
   }
-  
+
 });
-<form method="post" action="/foods/users/<%=user._id%>/foods">
+<form method="post" action="/items/users/<%=user._id%>/items">
   <input type="text" name="name">
   <input type="text" name='color'>
   <input type="submit" value="Create">

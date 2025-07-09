@@ -10,20 +10,37 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  pantry:  {
-    property: name,
-    type: String,
-  }
+
 });
 
 
-const foodSchema = new mongoose.Schema({
-  Food: {
-    property: name,
+const itemSchema = new mongoose.Schema({
+  itemType: {
     type: String,
     required: true,
+  },
+  price: {
+    type: Number,
+    required: true,
+  },
+  sellerAgreement: {
+    type: Boolean,
+    required: true,
+},
+  description: {
+  type: String,
+  required: true,
+  },
+
+  sold: {
+    type: Boolean,
+    required: true,
+  },
+  buy: {
+    type: Number,
+    required: true
   }
-  
+
 });
 
 const User = mongoose.model('User', userSchema);

@@ -1,5 +1,5 @@
 {
-  "name": "men-stack-session-auth-template",
+  "name": "Ecommerse-Website-Creation",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://git.generalassemb.ly/modular-curriculum-all-courses/men-stack-session-auth-template"
+    "url": "https://git.generalassemb.ly/evyang5/Ecommerse-Website-Creation"
   },
   "author": "",
   "license": "ISC",
@@ -19,8 +19,10 @@
     "ejs": "^3.1.9",
     "express": "^4.18.2",
     "express-session": "^1.17.3",
+    "method": "^2.0.0",
     "method-override": "^3.0.0",
     "mongoose": "^8.0.1",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "override": "^0.0.1"
   }
 }
