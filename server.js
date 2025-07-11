@@ -52,13 +52,13 @@ app.get('/vip-lounge', (req, res) => {
  app.get('/items', (req, res) => {
   res.render('items.ejs')
  })
-app.post('/auth/items', (req, res)=> {
+app.get('/controllers/items.ejs', (req, res)=> {
   res.render('items.ejs')
 })
   
 app.use(passUserToView);
 app.use('/auth', authController);
-//app.use(isSignedIn);
+app.use(isSignedIn);
 app.use('/items', itemsController);
 
 

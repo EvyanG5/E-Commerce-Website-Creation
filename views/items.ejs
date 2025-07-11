@@ -8,20 +8,25 @@
  <%- include('./partials/_navbar.ejs') %>
 <body>
     <h1 style = "color:blue;">Item List</h1>
-    <a href='/' >'Add New Item'</a>
-<li>prices</li>
 
 
 
-    <form action="/items/users/:userId/items" method="POST">
+
+   <form action="/users/<%= user._id %>/applications" method="POST">" 
+        <label>Name</label>
     <input type="text" name="name">
+    <label>color</label>
   <input type="text" name='color'>
+  <label>Price</label>
   <input type="number" name="price">
+  <label>item Type</label>
   <input type="'text" name="itemType">
+  <label>Sellers Agreement?</label>
   <input type="text" name="sellersAgreement">
+  <label>Description</label>
   <input type="text" name="description">
   <input type="submit" value="Create">
 </form>
 </body>
-
+<p>Red Apple</p>
 </html>
