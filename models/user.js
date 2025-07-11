@@ -37,7 +37,7 @@ const itemSchema = new mongoose.Schema({
     required: true,
   },
   buy: {
-    type: Number,
+    type: Boolean,
     required: true
   }
 

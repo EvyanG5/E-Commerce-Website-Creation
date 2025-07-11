@@ -1,29 +1,26 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title></title>
-  <%- include('./partials/_navbar.ejs') %>
-
+  <title>Items List Page</title>
 </head>
+ <%- include('./partials/_navbar.ejs') %>
 <body>
+    <h1 style = "color:blue;">Item List</h1>
+    <a href='/' >'Add New Item'</a>
+<li>prices</li>
 
-<form method="post" action="/items/users/<%=user._id%>/items">
-  <label>Name</label>
-  <input type="text" name="name">
-  <label>Color</label>
+
+
+    <form action="/items/users/:userId/items" method="POST">
+    <input type="text" name="name">
   <input type="text" name='color'>
-  <label>Price</label>
   <input type="number" name="price">
-  <label>Item Type</label>
   <input type="'text" name="itemType">
-  <label>Sellers Agreement</label>
   <input type="text" name="sellersAgreement">
-  <label>Description</label>
   <input type="text" name="description">
   <input type="submit" value="Create">
-
 </form>
 </body>
 

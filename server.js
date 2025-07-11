@@ -26,14 +26,17 @@ app.use(methodOverride('_method'));
 // app.use(morgan('dev'));
 app.use(
   session({
-    secret: process.env,
+    secret: process.env.SECRET_KEY,
     resave: false,
     saveUninitialized: true,
   })
 );
 
 app.get('/', (req, res) => {
-  res.redirect('/auth/sign-in')
+  res.render('home.ejs', {
+    user: req.session.user,
+
+  })
 });
 
 app.get('/vip-lounge', (req, res) => {
@@ -43,12 +46,19 @@ app.get('/vip-lounge', (req, res) => {
     res.send('Sorry, no guests allowed.');
   }
   });
- 
-
-   
+ app.get('/home', (req, res) => {
+  res.render('home.ejs')
+ });
+ app.get('/items', (req, res) => {
+  res.render('items.ejs')
+ })
+app.post('/auth/items', (req, res)=> {
+  res.render('items.ejs')
+})
+  
 app.use(passUserToView);
 app.use('/auth', authController);
-app.use(isSignedIn);
+//app.use(isSignedIn);
 app.use('/items', itemsController);
 
 

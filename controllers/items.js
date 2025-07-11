@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
 router.get('/new', (req, res) => {
     res.render('new.ejs')
 });
-// localhost:3000/foods/new
+
 router.post('/users/:userId/items', (req, res) => {
     const loggedinUser = req.session.user
     console.log({loggedinUser, body: req.body})

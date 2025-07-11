@@ -61,7 +61,7 @@ router.post('/sign-in', async (req, res) => {
     if (!validPassword) {
       return res.send('Login failed. Please try again.');
     }
-  
+  console.log('/////////////////test')
     // There is a user AND they had the correct password. Time to make a session!
     // Avoid storing the password, even in hashed format, in the session
     // If there is other data you want to save to `req.session.user`, do so here!
@@ -69,12 +69,18 @@ router.post('/sign-in', async (req, res) => {
       username: userInDatabase.username,
       _id: userInDatabase._id
     };
-  
     res.redirect('/home');
   } catch (error) {
     console.log(error);
     res.redirect('/');
   }
+});
+  router.get('/home', async (req, res) => {
+    res.render ('home.ejs')
+  });
+router.get('/items', async (req, res) => {
+  res.render('items.ejs')
+
 });
 
 module.exports = router;
